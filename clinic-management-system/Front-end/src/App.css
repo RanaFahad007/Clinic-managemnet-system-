@@ -1,0 +1,381 @@
+ .navbar {
+  position: fixed;
+   top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;        
+  padding: 10px 20px 10px 15px;  /* top right bottom left */
+  background-color: #009966;  
+  color: white;               
+  font-family: Arial, sans-serif; 
+  z-index: 1000;  
+  box-sizing: border-box; 
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.8rem;          
+  color: white;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 25px;                  
+}
+
+.navbar nav a {
+  color: rgb(255, 255, 255);               
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;            
+  transition: color 0.3s;     
+}
+
+.navbar nav a:hover {
+  color: rgb(0, 0, 0);               
+}
+/* Hero Section */
+ 
+ .hero {
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 50px;          /* top-bottom 60px, left-right 50px */
+  background: #e6ffe6;         /* Light green background for consistency with Navbar */
+  gap: 40px;                    /* space between text and image */
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  color: #009966;              /* Navbar green */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #111;                 /* dark text for readability */
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #009966;          /* Navbar green */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background: #007a52;          /* Darker green on hover */
+  transform: translateY(-2px);
+}
+
+.hero-img img {
+  width: 450px;                 /* professional size */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text, .hero-img {
+    max-width: 100%;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+}
+/* Core Services Section */
+.services {
+  text-align: center;
+  padding: 60px 50px;          /* top-bottom 60px, left-right 50px */
+  background: #f9fff9;         /* very light green for consistency */
+  gap: 30px;
+}
+
+.services h2 {
+  font-size: 36px;
+  color: #009966;              /* Navbar green */
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;                   /* space between cards */
+}
+
+.card {
+  background: white;
+  padding: 25px 20px;
+  width: 250px;                /* card width */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #007a52;              /* dark green for titles */
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #111;                 /* dark text */
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;                /* cards take more space on smaller screens */
+    margin-bottom: 20px;
+  }
+}
+/* Medical Services Section */
+.medical-services {
+  text-align: center;
+  padding: 60px 50px;
+  background: #f0fff0;        /* Light green tint to match theme */
+}
+
+.medical-services h2 {
+  font-size: 36px;
+  color: #009966;             /* Navbar green */
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  padding: 25px 20px;
+  width: 270px;               /* slightly larger cards for big images */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  color: #007a52;             
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #111;               
+  line-height: 1.5;
+}
+
+ 
+@media (max-width: 1024px) {
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+.about {
+  padding: 60px 50px;
+  text-align: center;
+  background: #e6ffe6;        
+}
+
+.about h2 {
+  font-size: 32px;
+  color: #009966;           
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.about p {
+  font-size: 18px;
+  color: #111;                
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.contact {
+  padding: 60px 50px;
+  text-align: center;
+  background: #f0fff0;      
+}
+
+.contact h2 {
+  font-size: 32px;
+  color: #009966;             
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.contact p {
+  font-size: 18px;
+  color: #111;               
+  margin: 8px 0;
+  line-height: 1.5;
+}
+footer {
+  background: #009966;         
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+ 
+ .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 420px;
+  max-width: 90%;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  border-top: 6px solid #009966;  
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: #ff4d4d;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #cc0000;
+}
+
+.popup-content h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #009966;    
+  font-weight: bold;
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 15px;
+}
+
+.popup-content label {
+  text-align: left;
+  font-weight: 500;
+  color: #007a52;    
+  margin-bottom: 5px;
+}
+
+.popup-content input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.popup-content input:focus {
+  border: 1px solid #009966;  
+  outline: none;
+}
+
+.popup-content button {
+  background: #009966;    
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+  background: #007a52;   
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
